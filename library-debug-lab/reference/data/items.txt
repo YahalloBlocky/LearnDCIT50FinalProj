@@ -1,0 +1,8 @@
+BOOK|B001|Clean Code|Robert C. Martin|9780132350884
+BOOK|B002|Head First Java|Kathy Sierra|9780596009205
+BOOK|B003|Effective Java|Joshua Bloch|9780134685991
+BOOK|B004|Introduction to Algorithms|Thomas Cormen|9780262033848
+BOOK|B005|The Pragmatic Programmer|Andrew Hunt|9780135957059
+MAGAZINE|M001|National Geographic|Issue 12|NatGeo Society
+MAGAZINE|M002|Time|March 2026|Time USA
+MAGAZINE|M003|Wired|Issue 8|Conde Nast
