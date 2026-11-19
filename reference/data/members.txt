@@ -1,5 +1,0 @@
-STUDENT|S001|Ana Cruz|BSIT
-STUDENT|S002|Ben Reyes|BSCS
-STUDENT|S003|Carla Santos|BSIT
-FACULTY|F001|Dr. Lopez|Computer Science
-FACULTY|F002|Prof. Garcia|Mathematics
