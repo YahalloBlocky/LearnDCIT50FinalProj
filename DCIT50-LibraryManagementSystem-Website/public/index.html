@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A beginner-friendly study hub for the DCIT 50 Library Management System Java project: lessons, source code walkthroughs, debugging practice and quizzes." />
+  <title>DCIT 50 Library System - Learning Hub</title>
+  <link rel="stylesheet" href="css/style.css?v=14" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="#dashboard" data-nav="dashboard">
+        <span class="logo-icon" aria-hidden="true">📚</span>
+        <span class="logo-text">DCIT 50 <span class="logo-sub">Learning Hub</span></span>
+      </a>
+
+        <div class="search-box">
+          <label class="visually-hidden" for="searchInput">Search this page</label>
+          <input type="search" id="searchInput" placeholder="Search this page…" autocomplete="off" />
+          <span class="search-icon" aria-hidden="true">🔍</span>
+        </div>
+
+      <div class="topbar-actions">
+        <button class="btn-icon" id="toggleTheme" type="button" aria-label="Toggle dark mode">🌙</button>
+        <button class="btn btn-primary btn-small" id="progressBtn" type="button">My progress</button>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main sections">
+      <ul>
+        <li><a href="#dashboard" data-nav="dashboard" class="active">Dashboard</a></li>
+        <li><a href="#java-fundamentals" data-nav="java-fundamentals">Java Basics</a></li>
+        <li><a href="#code-explorer" data-nav="code-explorer">Code Explorer</a></li>
+        <li><a href="#system-walkthrough" data-nav="system-walkthrough">System Walkthrough</a></li>
+        <li><a href="#debugging-lab" data-nav="debugging-lab">Debugging Lab</a></li>
+        <li><a href="#practice-questions" data-nav="practice-questions">Practice Q&amp;A</a></li>
+        <li><a href="#quizzes" data-nav="quizzes">Quizzes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="mainContent">
+
+    <!-- ================= DASHBOARD ================= -->
+    <section id="dashboard" class="page active" data-page="dashboard" aria-labelledby="dashboardTitle">
+      <div class="page-head">
+        <p class="eyebrow">DCIT 50 · Final Project</p>
+        <h1 id="dashboardTitle">Library Management System</h1>
+        <p class="subtitle">Learn the Java project one small step at a time: read the lessons, open the real source code, practise debugging, then test yourself.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-main">
+          <section class="panel progress-card" aria-labelledby="progressTitle">
+            <div class="panel-head">
+              <h2 id="progressTitle">Your progress</h2>
+              <span class="progress-percent" id="overallProgressPercent">0%</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-labelledby="progressTitle" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="overallProgressBar">
+              <div class="progress-fill" id="overallProgressFill"></div>
+            </div>
+            <p class="progress-summary" id="progressSummary">Open a lesson or take a quiz to start tracking your progress.</p>
+          </section>
+
+          <div class="stats-grid">
+            <div class="stat">
+              <span class="stat-icon" aria-hidden="true">📖</span>
+              <span class="stat-number" id="statLessons">0</span>
+              <span class="stat-label">Lessons opened</span>
+            </div>
+            <div class="stat">
+              <span class="stat-icon" aria-hidden="true">✅</span>
+              <span class="stat-number" id="statQuizzes">0</span>
+              <span class="stat-label">Quizzes taken</span>
+            </div>
+            <div class="stat">
+              <span class="stat-icon" aria-hidden="true">🔍</span>
+              <span class="stat-number" id="statCodeSections">0</span>
+              <span class="stat-label">Files studied</span>
+            </div>
+            <div class="stat">
+              <span class="stat-icon" aria-hidden="true">🐞</span>
+              <span class="stat-number" id="statChallenges">0</span>
+              <span class="stat-label">Bugs attempted</span>
+            </div>
+          </div>
+
+          <section class="panel start-card" aria-labelledby="startTitle">
+            <h2 id="startTitle">Where to start</h2>
+            <p>New to this project? Follow this order. Each step builds on the one before it.</p>
+            <ol class="start-steps">
+              <li><a href="#java-fundamentals" data-nav="java-fundamentals"><span class="start-text"><strong>Java Basics</strong><span>Learn the keywords and syntax the project uses.</span></span></a></li>
+              <li><a href="#code-explorer" data-nav="code-explorer"><span class="start-text"><strong>Code Explorer</strong><span>Read every source file, one section at a time.</span></span></a></li>
+              <li><a href="#debugging-lab" data-nav="debugging-lab"><span class="start-text"><strong>Debugging Lab</strong><span>Practise the bugs your professor may ask about.</span></span></a></li>
+              <li><a href="#practice-questions" data-nav="practice-questions"><span class="start-text"><strong>Practice Q&amp;A</strong><span>Rehearse the demonstration questions.</span></span></a></li>
+            </ol>
+          </section>
+        </div>
+
+        <aside class="panel course-outline" aria-labelledby="outlineTitle">
+          <h2 id="outlineTitle">Course map</h2>
+          <ul id="outlineList"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= JAVA FUNDAMENTALS ================= -->
+    <section id="java-fundamentals" class="page" data-page="java-fundamentals" aria-labelledby="javaTitle">
+      <div class="page-head">
+        <p class="eyebrow">Section 1</p>
+        <h1 id="javaTitle">Java Fundamentals</h1>
+        <p class="subtitle">The building blocks of Java, explained from zero using only what this project actually uses. Open a chapter, then open a lesson.</p>
+      </div>
+      <div class="chapters" id="chaptersList"></div>
+    </section>
+
+    <!-- ================= CODE EXPLORER ================= -->
+    <section id="code-explorer" class="page" data-page="code-explorer" aria-labelledby="explorerTitle">
+      <div class="page-head">
+        <p class="eyebrow">Section 2</p>
+        <h1 id="explorerTitle">Code Explorer</h1>
+        <p class="subtitle">The real source code of the project, file by file. Pick a file below; every section explains what the code does and why.</p>
+      </div>
+      <div id="codeExplorerList" class="tablist" role="tablist" aria-label="Project source files"></div>
+      <div id="codeExplorerContent" class="tab-content"></div>
+    </section>
+
+    <!-- ================= SYSTEM WALKTHROUGH ================= -->
+    <section id="system-walkthrough" class="page" data-page="system-walkthrough" aria-labelledby="walkthroughTitle">
+      <div class="page-head">
+        <p class="eyebrow">Section 3</p>
+        <h1 id="walkthroughTitle">How the System Works</h1>
+        <p class="subtitle">Follow the program from the moment it starts to the moment it saves your data and exits.</p>
+      </div>
+      <div class="walkthrough-cards"></div>
+    </section>
+
+    <!-- ================= DEBUGGING LAB ================= -->
+    <section id="debugging-lab" class="page" data-page="debugging-lab" aria-labelledby="debugTitle">
+      <div class="page-head">
+        <p class="eyebrow">Section 4</p>
+        <h1 id="debugTitle">Debugging Lab</h1>
+        <p class="subtitle">Edit the broken Java code right here, run the hidden tests, and fix the logic. Any correct algorithm passes, no matter how it is formatted.</p>
+      </div>
+      <div class="tablist debugging-tabs" role="tablist" aria-label="Debugging levels">
+        <button class="tab-btn active" type="button" data-tab="beginner" role="tab" aria-selected="true">Beginner</button>
+        <button class="tab-btn" type="button" data-tab="intermediate" role="tab" aria-selected="false">Intermediate</button>
+        <button class="tab-btn" type="button" data-tab="advanced" role="tab" aria-selected="false">Advanced</button>
+        <button class="tab-btn" type="button" data-tab="simulator" role="tab" aria-selected="false">5-Minute Challenge</button>
+        <button class="tab-btn" type="button" data-tab="random" role="tab" aria-selected="false">Random Mode</button>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel active" data-panel="beginner"></div>
+        <div class="tab-panel" data-panel="intermediate"></div>
+        <div class="tab-panel" data-panel="advanced"></div>
+        <div class="tab-panel" data-panel="simulator"></div>
+        <div class="tab-panel" data-panel="random"></div>
+      </div>
+    </section>
+
+    <!-- ================= PRACTICE Q&A ================= -->
+    <section id="practice-questions" class="page" data-page="practice-questions" aria-labelledby="qaTitle">
+      <div class="page-head">
+        <p class="eyebrow">Section 5</p>
+        <h1 id="qaTitle">Prepare for the Demo</h1>
+        <p class="subtitle">The questions your professor is likely to ask, with short answers, a deeper explanation, the source to point at, and a follow-up.</p>
+      </div>
+      <div id="practiceQaList" class="qa-list"></div>
+    </section>
+
+    <!-- ================= QUIZZES ================= -->
+    <section id="quizzes" class="page" data-page="quizzes" aria-labelledby="quizTitle">
+      <div class="page-head">
+        <p class="eyebrow">Section 6</p>
+        <h1 id="quizTitle">Quizzes &amp; Review</h1>
+        <p class="subtitle">Short quizzes that check what you remember. Pick one to begin.</p>
+      </div>
+      <div class="quiz-menu" role="group" aria-label="Choose a quiz">
+        <button class="quiz-btn" type="button" data-quiz="basics"><span class="quiz-btn-icon" aria-hidden="true">☕</span><span><strong>Java Basics</strong><small>5 questions</small></span></button>
+        <button class="quiz-btn" type="button" data-quiz="oop"><span class="quiz-btn-icon" aria-hidden="true">🧩</span><span><strong>Object-Oriented</strong><small>5 questions</small></span></button>
+        <button class="quiz-btn" type="button" data-quiz="collections"><span class="quiz-btn-icon" aria-hidden="true">📦</span><span><strong>Collections &amp; Generics</strong><small>5 questions</small></span></button>
+        <button class="quiz-btn" type="button" data-quiz="design"><span class="quiz-btn-icon" aria-hidden="true">🏗️</span><span><strong>Design &amp; Quality</strong><small>5 questions</small></span></button>
+        <button class="quiz-btn" type="button" data-quiz="final"><span class="quiz-btn-icon" aria-hidden="true">🎓</span><span><strong>Final Review</strong><small>10 questions</small></span></button>
+      </div>
+      <div id="quizContainer" class="quiz-area"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>DCIT 50 Library Management System · Learning Hub</p>
+    <p class="small">Built for the final demonstration. Study one small step at a time.</p>
+  </footer>
+
+  <div id="progressOverlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="progressOverlayTitle">
+    <div class="overlay-box">
+      <div class="overlay-head">
+        <h2 id="progressOverlayTitle">Your progress</h2>
+        <button class="btn-icon" id="closeProgress" type="button" aria-label="Close progress">✕</button>
+      </div>
+      <div id="progressOverlayContent"></div>
+    </div>
+  </div>
+
+  <script src="js/content-data.js?v=14"></script>
+  <script src="js/main.js?v=14"></script>
+  <script src="js/progress.js?v=14"></script>
+  <script src="js/content-loader.js?v=14"></script>
+  <script src="js/code-explorer.js?v=14"></script>
+  <script src="js/debugging.js?v=14"></script>
+  <script src="js/quizzes.js?v=14"></script>
+  <script src="js/search.js?v=14"></script>
+</body>
+</html>
